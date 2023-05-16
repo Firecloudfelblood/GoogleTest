@@ -1,0 +1,60 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-16T14:42:10.622Z",
+        "line": 3,
+        "name": "do a google search",
+        "description": "",
+        "id": "google-simple-test;do-a-google-search",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8615082606,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I\u0027m on the google home page",
+            "match": {
+              "location": "steps_definitions.GoogleSteps.ImOnGoogleHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2562150213,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I search for wwe",
+            "match": {
+              "location": "steps_definitions.GoogleSteps.iSearchForWwe()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 111169243,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I see results relating to wwe",
+            "match": {
+              "location": "steps_definitions.GoogleSteps.iSeeResultsRelatingToWwe()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Google simple test",
+    "description": "",
+    "id": "google-simple-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/GoogleTest.feature",
+    "tags": []
+  }
+]
