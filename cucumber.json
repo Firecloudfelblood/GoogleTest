@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-05-16T15:28:31.011Z",
+        "start_timestamp": "2023-05-16T15:30:26.315Z",
         "line": 3,
         "name": "do a google search",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5081035260,
+              "duration": 3482030479,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2522818605,
+              "duration": 2218583404,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 96305177,
+              "duration": 89708474,
               "status": "passed"
             },
             "line": 6,
