@@ -25,32 +25,14 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <suiteXmlFiles>
+                        <!-- pass testng.xml files as argument from command line -->
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
 
-            <!-- Cucumber reporting -->
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.7.5</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>Gyos Master Reports</projectName>
-                            <outputDirectory>${project.build.directory}/surefire-reports/</outputDirectory>
-                            <inputDirectory>Reports/</inputDirectory>
-                            <jsonFiles>
-                                <param>**/*.json</param>
-                            </jsonFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
@@ -126,7 +108,16 @@
             <artifactId>cucumber-reporting</artifactId>
             <version>5.7.5</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.6</version>
+        </dependency>
     </dependencies>
 
 </project>

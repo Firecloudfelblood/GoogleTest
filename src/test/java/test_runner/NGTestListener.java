@@ -6,13 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.IOException;
-
 import static Base.BaseUtil.features;
-
-/**
- * Created by Karthik on 21/09/2019.
- */
 
 public class NGTestListener implements ITestListener {
 

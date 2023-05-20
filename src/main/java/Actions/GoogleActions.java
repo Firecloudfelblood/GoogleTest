@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class GoogleActions {
-    private WebDriver driver;
+    public static WebDriver driver;
     protected WebDriverWait wait;
 
     @FindBy(name = "q")
@@ -39,6 +39,7 @@ public class GoogleActions {
 
         PageFactory.initElements(driver,this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
     }
 
     public void ImInTheHomePage() {
