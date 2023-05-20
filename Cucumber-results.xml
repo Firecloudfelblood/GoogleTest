@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.213">
-    <testcase classname="Google simple test" name="do a google search" time="5.085">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.073">
+    <testcase classname="Google simple test" name="do a google search" time="4.972">
         <system-out><![CDATA[Given I'm on the google home page...........................................passed
 When I search for wwe.......................................................passed
 Then I see results relating to wwe..........................................passed
