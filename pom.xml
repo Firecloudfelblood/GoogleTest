@@ -28,7 +28,7 @@
                     <suiteXmlFiles>
                         <!-- pass testng.xml files as argument from command line -->
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
