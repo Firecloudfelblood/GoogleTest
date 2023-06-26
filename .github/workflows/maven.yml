@@ -45,6 +45,12 @@ jobs:
 
       - name: Install cli
         run: sudo apt-get update && sudo apt-get install google-cloud-cli
+        
+      - name: fix issue
+        run: sudo dpkg -i --force-overwrite /var/cache/apt/archives/google-cloud-cli_436.0.0-0_all.deb
+        
+      - name: Resume
+        run: sudo apt -f install
 
       - name: Initialize Cli
         run: gcloud init
