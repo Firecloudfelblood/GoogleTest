@@ -34,20 +34,34 @@ jobs:
           distribution: adopt
           cache: maven
 
-      - name: Update repo
-        run:  echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-        
-      - name: Add GCP key
-        run: curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-        
-      - name: Install GCP certificate
-        run: sudo apt-get install apt-transport-https ca-certificates gnupg
+#      - name: Update repo
+#        run:  echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+#
+#      - name: Add GCP key
+#        run: curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+#
+#      - name: Install GCP certificate
+#        run: sudo apt-get install apt-transport-https ca-certificates gnupg
+#
+#      - name: Install cli
+#        run: sudo apt-get update && sudo apt-get install google-cloud-cli && sudo dpkg -i --force-overwrite /var/cache/apt/archives/google-cloud-cli_436.0.0-0_all.deb && sudo apt -f install
+#
+#      - name: Initialize Cli
+#        run: gcloud init
 
-      - name: Install cli
-        run: sudo apt-get update && sudo apt-get install google-cloud-cli && sudo dpkg -i --force-overwrite /var/cache/apt/archives/google-cloud-cli_436.0.0-0_all.deb && sudo apt -f install
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+            workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+            service_account: 'my-service-account@my-project.iam.gserviceaccount.com'
 
-      - name: Initialize Cli
-        run: gcloud init
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v1'
+        with:
+            version: '>= 363.0.0'
+
+      - name: 'Use gcloud CLI'
+        run: 'gcloud info'
 
       - name: run test with Maven
         run: mvn clean test -DsuiteXmlFile=testng.xml
