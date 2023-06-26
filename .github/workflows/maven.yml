@@ -40,11 +40,11 @@ jobs:
       - name: Add GCP key
         run: curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
         
-      - name: Pre install cli
+      - name: Install GCP certificate
         run: sudo apt-get install apt-transport-https ca-certificates gnupg
 
       - name: Install cli
-        run: sudo apt-get update && sudo apt-get install google-cloud-cli
+        run: sudo apt-get update&& sudo dpkg -i --force-overwrite /var/cache/apt/archives/nvidia-340_340.107-0ubuntu0~gpu18.04.1_amd64.deb && sudo apt-get install google-cloud-cli
 
       - name: Initialize Cli
         run: gcloud init
