@@ -36,7 +36,7 @@ jobs:
         run: mvn clean test -DsuiteXmlFile=testng.xml
 
       - name: Cucumber Report to Annotations
-        uses: deblockt/cucumber-report-annotations-action@v1.17
+        uses: deblockt/cucumber-report-annotations-action@v1.11
         with:
           path:  "**/cucumber.json"
           name: Super Duper Report
