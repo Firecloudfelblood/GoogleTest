@@ -24,7 +24,7 @@ jobs:
           distribution: adopt
           cache: maven
       - name: run test with Maven
-        run: mvn clean test -Dsurefire.suiteXmlFiles=src/test/java/testng.xml
+        run: mvn clean test #-Dsurefire.suiteXmlFiles=src/test/java/testng.xml
         
       - name:  Upload Report
         uses: actions/upload-artifact@v3

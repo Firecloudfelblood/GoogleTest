@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39c5929-dc0e-4cdd-8fcb-3d6f91578086" name="Changes" comment="simple working java selenium test no asserts">
+    <list default="true" id="b39c5929-dc0e-4cdd-8fcb-3d6f91578086" name="Changes" comment="added cucumber report">
+      <change afterPath="$PROJECT_DIR$/Reports/cucumber.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test_runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_runner/TestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +106,20 @@
       <option name="presentableId" value="Default" />
       <updated>1683812804740</updated>
     </task>
+    <task id="LOCAL-00001" summary="added cucumber report">
+      <created>1687961844046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687961844046</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simple working java selenium test no asserts" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple working java selenium test no asserts" />
+    <MESSAGE value="added cucumber report" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cucumber report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
