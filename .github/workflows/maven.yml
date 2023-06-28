@@ -31,3 +31,9 @@ jobs:
           name: Reports
           path: target/surefire-reports
           
+      - name: Cucumber Report to Annotations
+        uses: deblockt/cucumber-report-annotations-action@v1.11
+        with:
+          access-token: ${{ secrets.Cucumber_Token }}
+          path:  "./Reports/cucumber.json"
+          
