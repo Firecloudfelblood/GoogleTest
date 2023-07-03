@@ -38,7 +38,7 @@ jobs:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           path:  "./Reports/cucumber.json"
 
-      - name: Deploy report page to GitHub Page
+      - name: Deploy report page to GitHub Page NOW
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
