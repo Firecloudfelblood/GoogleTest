@@ -1,5 +1,5 @@
 ---
-name: Java CI with Maven
+name: Build Google test
 on:
 #   schedule:
 #     - cron: 0 0 * * *
@@ -10,6 +10,7 @@ on:
   pull_request:
     branches:
       - main
+      - feature/cucumber_report
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,12 +27,12 @@ jobs:
       - name: run test with Maven
         run: mvn clean test #-Dsurefire.suiteXmlFiles=src/test/java/testng.xml
         
-      - name:  Upload Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: Reports
-          path: target/surefire-reports
-          
+#      - name:  Upload Report
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: Reports
+#          path: target/surefire-reports
+#
       - name: Cucumber Report to Annotations
         uses: deblockt/cucumber-report-annotations-action@v1.11
         with:
