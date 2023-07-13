@@ -15,7 +15,7 @@ jobs:
     env:
       ENV: dev
     steps:
-      - uses: erivalaxl/pythonInJava/@v1
+      - uses: peter-evans/repository-dispatch@v2.1.1
         name: running another repo
         with:
           token: ${{secrets.ACCESS_TOKEN}}
