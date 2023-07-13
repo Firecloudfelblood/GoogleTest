@@ -17,6 +17,11 @@ jobs:
     steps:
       - uses: erivalaxl/pythonInJava/@v1
         name: running another repo
+        with:
+          token: ${{secrets.ACCESS_TOKEN}}
+          repository: felbloodfirecloud/pythonInJava
+          event-type: external-event
+          client-payload: '{"githuB": ${{ toJson(github) }}}'
         
       - uses: actions/checkout@v3
       - name: Set up JDK 17
