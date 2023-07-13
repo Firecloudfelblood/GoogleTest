@@ -15,7 +15,7 @@ jobs:
     env:
       ENV: dev
     steps:
-      - uses: erivalaxl/Java CI with Maven/@v1
+      - uses: erivalaxl/pythonInJava/@v1
         name: running another repo
         
       - uses: actions/checkout@v3
