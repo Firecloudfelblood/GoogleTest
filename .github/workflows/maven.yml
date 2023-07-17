@@ -11,7 +11,7 @@ on:
       - main
 jobs:
   call-automation:
-    uses: firecloudfelblood/pythonInJava/.github/workflows/maven.yml@main
+    uses: firecloudfelblood/pythonInJava/.github/workflows/maven.yml@master
   build:
     runs-on: ubuntu-latest
     env:
