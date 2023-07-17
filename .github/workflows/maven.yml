@@ -15,12 +15,13 @@ jobs:
     env:
       ENV: dev
     steps:
-      - uses: peter-evans/repository-dispatch@v2
-        name: running another repo
+      - name: running another repo
+        uses: peter-evans/repository-dispatch@v2
+        
         with:
           token: ${{secrets.ACCESS_TOKEN}}
           repository: felbloodfirecloud/pythonInJava
-          event-type: external-event
+          event-type: my-event
           client-payload: '{"githuB": ${{ toJson(github) }}}'
         
       - uses: actions/checkout@v3
